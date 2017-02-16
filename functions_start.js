@@ -84,10 +84,10 @@ function sort(a) {
         var j = result[i];
         var k;
         for (k = i - 1;
-            (k >= 0) && (j < result[i]); --k) {
-            result[k - 1] = result[k];
+            (k >= 0) && (j < result[k]); k--) {
+            result[k + 1] = result[k];
         }
-        result[k - 1] = j;
+        result[k + 1] = j;
     }
     return result;
 }
